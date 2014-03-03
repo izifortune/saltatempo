@@ -19,6 +19,7 @@
   <!-- build:css styles/vendor/bootstrap.css -->
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/lightbox2/css/lightbox.css">
   <!-- endbuild -->
 
   <link rel="stylesheet" href="styles/main.css">
@@ -69,15 +70,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><strong>salta</strong>tempo</a>
+      <a id="locandineBtn" class="navbar-brand" href="#locandine"><strong>salta</strong>tempo</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a class="aboutBtn" href="#about">Chi Siamo</a></li>
-        <li><a class="galleriesBtn" href="#galleries">Gallerie</a></li>
-        <li><a class="contactsBtn" href="#contacts">Contatti</a></li>
+        <li><a id="aboutBtn" href="#about">Chi Siamo</a></li>
+        <li><a id="galleriesBtn" href="#galleries">Gallerie</a></li>
+        <li><a id="contactsBtn" href="#contacts">Contatti</a></li>
       </ul>
     </ul>
   </div><!-- /.navbar-collapse -->
@@ -91,7 +92,9 @@
 <!-- start: locandina -->
   <div class="col-xs-4 col-sm-4 col-md-4">
     <div class="thumbnail">
+      <a href="images/slides/fnn_2013.jpg" data-lightbox="intro">
       <img src="images/slides/fnn_2013.jpg">
+      </a>
       <div class="caption">
         <!-- <h3 class="text-center">Fuochi nella notte 2013</h3> -->
         <!-- <p>...</p> -->
@@ -104,7 +107,9 @@
 <!-- start: locandina -->
   <div class="col-xs-4 col-sm-4 col-md-4">
     <div class="thumbnail">
+      <a href="images/slides/fnn_2012.jpg" data-lightbox="intro">
       <img src="images/slides/fnn_2012.jpg">
+      </a>
       <div class="caption">
         <!-- <h3 class="text-center">Fuochi nella notte 2012</h3> -->
         <!-- <p>...</p> -->
@@ -117,7 +122,9 @@
 <!-- start: locandina -->
   <div class="col-xs-4 col-sm-4 col-md-4">
     <div class="thumbnail">
+      <a href="images/slides/fnn_2010.jpg" data-lightbox="intro">
       <img src="images/slides/fnn_2010.jpg">
+      </a>
       <div class="caption">
         <!-- <h3 class="text-center">Fuochi nella notte 2010</h3> -->
 <!--         <p>...</p>
