@@ -3,7 +3,8 @@ require.config({
         jquery: '../bower_components/jquery/jquery',
         scrolld: '../bower_components/scrolld/scrolld',
         bootstrap: '../bower_components/bootstrap/dist/js/bootstrap',
-        lightbox2: '../bower_components/lightbox2/js/lightbox'
+        lightbox2: '../bower_components/lightbox2/js/lightbox',
+        fancybox: '../bower_components/fancybox/source/jquery.fancybox'
     },
     shim: {
         bootstrap: {
@@ -21,12 +22,15 @@ require.config({
             deps: [
                 'jquery'
             ]
+        },
+        fancybox: {
+            deps: ['jquery']
         }
     }
 });
 
-require(['app', 'jquery', 'bootstrap', 'scrolld', 'lightbox2'],
-    function(app, $, bst, scrolld, lightbox2) {
+require(['app', 'jquery', 'bootstrap', 'scrolld', 'lightbox2', 'fancybox'],
+    function(app, $, bst, scrolld, lightbox2, fan) {
         'use strict';
         // use app here
         $("[id*='Btn']").stop(true).on('click', function(e) {
@@ -52,6 +56,15 @@ require(['app', 'jquery', 'bootstrap', 'scrolld', 'lightbox2'],
         })();
         var options = new LightboxOptions();
         $(function() {
-            new lightbox2(options);
+            // new lightbox2(options);
+            $('.video-box').click(function (e) {
+                var src = $(e.currentTarget).data('video'),
+                title = $(e.currentTarget).data('title');
+                $('#myModal iframe').attr('src', src);
+                $('#myModal .modal-title').text(title);
+            });
+            $('#myModal').on('hide.bs.modal', function(e) {
+                $('#myModal iframe').removeAttr('src');
+            });
         });
     });

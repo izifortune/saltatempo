@@ -1,0 +1,148 @@
+@font-face {
+  font-family: 'Alien';
+  src: url('fonts/ALIEN5.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Boston';
+  src: url('fonts/boston.ttf')  format('truetype');
+}
+
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:200);
+
+
+/*
+Font size
+ */
+$fu14-text-huge: 45px;
+$fu14-text-normal: 30px;
+$fu14-text-small: 25px;
+
+/*
+Colors
+ */
+ $fu14-red: #e74226;
+ $fu14-white: white;
+ $fu14-gray: gray;
+
+.fu14-text-huge {
+    font-size: $fu14-text-huge !important;
+}
+
+.fu14-text-small {
+    font-size: $fu14-text-small !important;
+}
+
+.fu14-text-normal {
+    font-size: $fu14-text-normal !important;
+}
+
+.fu14-text-red {
+    color: $fu14-red;
+}
+
+.fu14-text-white {
+    color: $fu14-white;
+}
+
+.fu14-text-boston {
+    font-family: 'Boston' !important;
+}
+
+.fu14-text-alien {
+    font-family: 'Alien' !important;
+}
+
+.fu14 {
+    h1, h2, p, {
+        font-size: $fu14-text-normal;
+        font-family: 'Boston';
+    }
+
+    background-color: #757576;
+
+    .fa-stack {
+        color: white;
+        &:hover {
+            @extend .fu14-text-red;
+        }
+    }
+
+    .fa-inverse {
+        @extend .fu14-text-red;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    .col-sm-3:after {
+        //TODO media query qui
+            background: $fu14-red;
+            width: 1px;
+            height: 150px;
+            content: "";
+            display:block;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            &:last-of-type {
+            }
+    }
+
+    .col-sm-3:last-of-type:after {
+        width: 0;
+    }
+
+}
+
+.small-margin-top {
+    margin-top: 20px;
+}
+
+.small-padding-top {
+    padding-top: 20px;
+}
+
+.small-padding-bottom {
+    padding-bottom: 20px;
+}
+
+.fu14-date {
+    @extend .small-padding-bottom;
+    color: white;
+    font-size: $fu14-text-small;
+    font-family: 'Titillium Web', sans-serif !important;
+    font-weight: 100;
+    span {
+        @extend .fu14-text-red;
+        font-size: $fu14-text-huge;
+    }
+}
+
+.fu14-link {
+    color: white;
+    font-size: $fu14-text-normal;
+    font-family: 'Boston';
+    &:hover {
+        @extend .fu14-text-red;
+        text-decoration: none;
+    }
+}
+
+.fu14-fuoco {
+    height: 360px;
+    background: url(../images/fuoco.png) no-repeat center center fixed;
+}
+
+.fu14-pattern {
+// background:
+// radial-gradient(black 15%, transparent 16%) 0 0,
+// radial-gradient(black 15%, transparent 16%) 8px 8px,
+// radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+// radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+// background-color:#282828;
+// background-size:16px 16px;
+
+background: url(../images/slides/fondo.jpg);
+}

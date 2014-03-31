@@ -6,6 +6,12 @@ $gray: rgb(194, 194, 194);
 $lightOrange:#ffb873;
 
 @import 'portfolio';
+@import 'fu14';
+
+.bg-orange {
+    background-color: $orange;
+    color: white;
+}
 
 body {
     background: #fafafa;
